@@ -7,6 +7,7 @@ const botonCalcular = document.querySelector('#btn-calcular');
 botonCalcular.addEventListener('click', calcularOnClick);
 
 function calcularOnClick(){
-    const multiplicacion = (Number(cantidad.value)) * 2;
-    ingreso.innerHTML = multiplicacion; //No salio el resultado visto
+    const ingresoGravable = (Number(cantidad.value));
+    ingreso.innerHTML = "$ " + ingresoGravable;
+    event.preventDefault(); 
 }

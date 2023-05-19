@@ -1,6 +1,6 @@
 //Modelo:https://www.elcontribuyente.mx/calculadora/isr/
 //Tabla Tarifa 2023: https://idconline.mx/fiscal-contable/2023/01/02/tarifa-mensual-de-isr-2023
-
+//Ver Platzi 23 y 24
 const cantidad = document.querySelector('#cantidad');
 const ingreso = document.querySelector('#ingreso');
 const botonCalcular = document.querySelector('#btn-calcular');
@@ -19,18 +19,41 @@ function calcularOnClick(){
     const deduccionCiega = (Number(cantidad.value)) * 0.35;
     const deduccionesDelMes = ingresoGravable - deduccionCiega;
 
-    if(deduccionesDelMes > 0 && deduccionesDelMes < 746.04){
-        const ganaMenosDe746 = deduccionesDelMes - 0.01;
-        const impuestoMarginal = ganaMenosDe746 * 0.0192;
-        const cuotafija = 0;
-        const impuestoISR = impuestoMarginal + cuotafija;//
+    if(deduccionesDelMes > limitesInferiores[0] && deduccionesDelMes < limitesSuperiores[0]){
+        const limiteInferior = limitesInferiores[0];
+        const ingresoExcedente = deduccionesDelMes - limiteInferior;
+        const impuestoMarginal = ingresoExcedente * (porcentajes[0] / 100);
+        
+        const impuestoISR = impuestoMarginal + cuotasFijas[0];
 
-        menosLimiteInferior.innerHTML = "$ " + ganaMenosDe746.toFixed(2);
-        porcentajeTarifaP.innerHTML = "% " + 1.92;
+        menosLimiteInferior.innerHTML = "$ " + ingresoExcedente.toFixed(2);
+        porcentajeTarifaP.innerHTML = "% " + porcentajes[0];
         impuestoMarginalP.innerHTML = "$ " + impuestoMarginal.toFixed(2);
-        cuotaFijaTarifaP.innerHTML = "$ " + cuotafija.toFixed(2);
-        pagarISRP.innerHTML = "$ " + impuestoISR.toFixed(2);//
+        cuotaFijaTarifaP.innerHTML = "$ " + cuotasFijas[0].toFixed(2);
+        pagarISRP.innerHTML = "$ " + impuestoISR.toFixed(2);
+
+        
     }
+
+    else if(deduccionesDelMes > limitesInferiores[1] && deduccionesDelMes < limitesSuperiores[1]){
+        const limiteInferior = limitesInferiores[1];
+        const ingresoExcedente = deduccionesDelMes - limiteInferior;
+        const impuestoMarginal = ingresoExcedente * (porcentajes[1] / 100);
+        
+        const impuestoISR = impuestoMarginal + cuotasFijas[1];
+
+        menosLimiteInferior.innerHTML = "$ " + ingresoExcedente.toFixed(2);
+        porcentajeTarifaP.innerHTML = "% " + porcentajes[1];
+        impuestoMarginalP.innerHTML = "$ " + impuestoMarginal.toFixed(2);
+        cuotaFijaTarifaP.innerHTML = "$ " + cuotasFijas[1].toFixed(2);
+        pagarISRP.innerHTML = "$ " + impuestoISR.toFixed(2);
+
+        
+    }
+
+    
+
+
     ingreso.innerHTML = "$ " + ingresoGravable.toFixed(2);
     deduccionMesP.innerHTML = "$ " + deduccionesDelMes.toFixed(2);
     event.preventDefault(); 

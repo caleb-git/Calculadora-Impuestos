@@ -12,7 +12,7 @@ tarifasISR.push({
         {limiteInferior: 49233.01, limiteSuperior: 93993.90, cuotaFija: 9236.89, porcentaje:30.00},
         {limiteInferior: 93993.91, limiteSuperior: 125325.20, cuotaFija: 22665.17, porcentaje:32.00},
         {limiteInferior: 125325.21, limiteSuperior: 375975.61, cuotaFija: 32691.18, porcentaje:34.00},
-        {limiteInferior: 375325.21, limiteSuperior: 375975.62, cuotaFija: 117912.32, porcentaje:35.00},
+        {limiteInferior: 375325.21, limiteSuperior: Infinity, cuotaFija: 117912.32, porcentaje:35.00},
         
     ],
 });

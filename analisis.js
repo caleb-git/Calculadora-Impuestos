@@ -23,3 +23,10 @@ const cuotasFijas = limites.map(function(elemento){
 const porcentajes = limites.map(function(elemento){
     return elemento.porcentaje;
 });
+
+// Formato Moneda
+ const numberFormatter = new Intl.NumberFormat('en-US',{
+    style: 'currency',
+    currency: 'USD',
+    minimumFractionDigits: 2
+ });

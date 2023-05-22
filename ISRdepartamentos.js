@@ -18,6 +18,7 @@ function calcularOnClick(){
     const ingresoGravable = (Number(cantidad.value));
     const deduccionCiega = (Number(cantidad.value)) * 0.35;
     const deduccionesDelMes = ingresoGravable - deduccionCiega;
+    
 
     if(deduccionesDelMes > limitesInferiores[0] && deduccionesDelMes < limitesSuperiores[0]){
         const limiteInferior = limitesInferiores[0];
@@ -26,11 +27,12 @@ function calcularOnClick(){
         
         const impuestoISR = impuestoMarginal + cuotasFijas[0];
 
-        menosLimiteInferior.innerHTML = "$ " + ingresoExcedente.toFixed(2);
-        porcentajeTarifaP.innerHTML = "% " + porcentajes[0];
-        impuestoMarginalP.innerHTML = "$ " + impuestoMarginal.toFixed(2);
-        cuotaFijaTarifaP.innerHTML = "$ " + cuotasFijas[0].toFixed(2);
-        pagarISRP.innerHTML = "$ " + impuestoISR.toFixed(2);
+        
+        menosLimiteInferior.innerHTML = numberFormatter.format(ingresoExcedente);
+        porcentajeTarifaP.innerHTML = porcentajes[0] + "%";
+        impuestoMarginalP.innerHTML = numberFormatter.format(impuestoMarginal);
+        cuotaFijaTarifaP.innerHTML = numberFormatter.format(cuotasFijas[0]);
+        pagarISRP.innerHTML = numberFormatter.format(impuestoISR);
 
         
     }
@@ -42,12 +44,11 @@ function calcularOnClick(){
         
         const impuestoISR = impuestoMarginal + cuotasFijas[1];
 
-        menosLimiteInferior.innerHTML = "$ " + ingresoExcedente.toFixed(2);
-        porcentajeTarifaP.innerHTML = "% " + porcentajes[1];
-        impuestoMarginalP.innerHTML = "$ " + impuestoMarginal.toFixed(2);
-        cuotaFijaTarifaP.innerHTML = "$ " + cuotasFijas[1].toFixed(2);
-        pagarISRP.innerHTML = "$ " + impuestoISR.toFixed(2);
-
+        menosLimiteInferior.innerHTML = numberFormatter.format(ingresoExcedente);
+        porcentajeTarifaP.innerHTML = porcentajes[1] + "%";
+        impuestoMarginalP.innerHTML = numberFormatter.format(impuestoMarginal);
+        cuotaFijaTarifaP.innerHTML = numberFormatter.format(cuotasFijas[1]);
+        pagarISRP.innerHTML = numberFormatter.format(impuestoISR);
         
     }
 
@@ -58,12 +59,11 @@ function calcularOnClick(){
         
         const impuestoISR = impuestoMarginal + cuotasFijas[2];
 
-        menosLimiteInferior.innerHTML = "$ " + ingresoExcedente.toFixed(2);
-        porcentajeTarifaP.innerHTML = "% " + porcentajes[2];
-        impuestoMarginalP.innerHTML = "$ " + impuestoMarginal.toFixed(2);
-        cuotaFijaTarifaP.innerHTML = "$ " + cuotasFijas[2].toFixed(2);
-        pagarISRP.innerHTML = "$ " + impuestoISR.toFixed(2);
-
+        menosLimiteInferior.innerHTML = numberFormatter.format(ingresoExcedente);
+        porcentajeTarifaP.innerHTML = porcentajes[2] + "%";
+        impuestoMarginalP.innerHTML = numberFormatter.format(impuestoMarginal);
+        cuotaFijaTarifaP.innerHTML = numberFormatter.format(cuotasFijas[2]);
+        pagarISRP.innerHTML = numberFormatter.format(impuestoISR);
         
     }
 
@@ -74,12 +74,11 @@ function calcularOnClick(){
         
         const impuestoISR = impuestoMarginal + cuotasFijas[3];
 
-        menosLimiteInferior.innerHTML = "$ " + ingresoExcedente.toFixed(2);
-        porcentajeTarifaP.innerHTML = "% " + porcentajes[3];
-        impuestoMarginalP.innerHTML = "$ " + impuestoMarginal.toFixed(2);
-        cuotaFijaTarifaP.innerHTML = "$ " + cuotasFijas[3].toFixed(2);
-        pagarISRP.innerHTML = "$ " + impuestoISR.toFixed(2);
-
+        menosLimiteInferior.innerHTML = numberFormatter.format(ingresoExcedente);
+        porcentajeTarifaP.innerHTML = porcentajes[3] + "%";
+        impuestoMarginalP.innerHTML = numberFormatter.format(impuestoMarginal);
+        cuotaFijaTarifaP.innerHTML = numberFormatter.format(cuotasFijas[3]);
+        pagarISRP.innerHTML = numberFormatter.format(impuestoISR);
         
     }
 
@@ -90,12 +89,11 @@ function calcularOnClick(){
         
         const impuestoISR = impuestoMarginal + cuotasFijas[4];
 
-        menosLimiteInferior.innerHTML = "$ " + ingresoExcedente.toFixed(2);
-        porcentajeTarifaP.innerHTML = "% " + porcentajes[4];
-        impuestoMarginalP.innerHTML = "$ " + impuestoMarginal.toFixed(2);
-        cuotaFijaTarifaP.innerHTML = "$ " + cuotasFijas[4].toFixed(2);
-        pagarISRP.innerHTML = "$ " + impuestoISR.toFixed(2);
-
+        menosLimiteInferior.innerHTML = numberFormatter.format(ingresoExcedente);
+        porcentajeTarifaP.innerHTML = porcentajes[4] + "%";
+        impuestoMarginalP.innerHTML = numberFormatter.format(impuestoMarginal);
+        cuotaFijaTarifaP.innerHTML = numberFormatter.format(cuotasFijas[4]);
+        pagarISRP.innerHTML = numberFormatter.format(impuestoISR);
         
     }
 
@@ -106,12 +104,11 @@ function calcularOnClick(){
         
         const impuestoISR = impuestoMarginal + cuotasFijas[5];
 
-        menosLimiteInferior.innerHTML = "$ " + ingresoExcedente.toFixed(2);
-        porcentajeTarifaP.innerHTML = "% " + porcentajes[5];
-        impuestoMarginalP.innerHTML = "$ " + impuestoMarginal.toFixed(2);
-        cuotaFijaTarifaP.innerHTML = "$ " + cuotasFijas[5].toFixed(2);
-        pagarISRP.innerHTML = "$ " + impuestoISR.toFixed(2);
-
+        menosLimiteInferior.innerHTML = numberFormatter.format(ingresoExcedente);
+        porcentajeTarifaP.innerHTML = porcentajes[5] + "%";
+        impuestoMarginalP.innerHTML = numberFormatter.format(impuestoMarginal);
+        cuotaFijaTarifaP.innerHTML = numberFormatter.format(cuotasFijas[5]);
+        pagarISRP.innerHTML = numberFormatter.format(impuestoISR);
         
     }
 
@@ -122,12 +119,11 @@ function calcularOnClick(){
         
         const impuestoISR = impuestoMarginal + cuotasFijas[6];
 
-        menosLimiteInferior.innerHTML = "$ " + ingresoExcedente.toFixed(2);
-        porcentajeTarifaP.innerHTML = "% " + porcentajes[6];
-        impuestoMarginalP.innerHTML = "$ " + impuestoMarginal.toFixed(2);
-        cuotaFijaTarifaP.innerHTML = "$ " + cuotasFijas[6].toFixed(2);
-        pagarISRP.innerHTML = "$ " + impuestoISR.toFixed(2);
-
+        menosLimiteInferior.innerHTML = numberFormatter.format(ingresoExcedente);
+        porcentajeTarifaP.innerHTML = porcentajes[6] + "%";
+        impuestoMarginalP.innerHTML = numberFormatter.format(impuestoMarginal);
+        cuotaFijaTarifaP.innerHTML = numberFormatter.format(cuotasFijas[6]);
+        pagarISRP.innerHTML = numberFormatter.format(impuestoISR);
         
     }
 
@@ -138,12 +134,11 @@ function calcularOnClick(){
         
         const impuestoISR = impuestoMarginal + cuotasFijas[7];
 
-        menosLimiteInferior.innerHTML = "$ " + ingresoExcedente.toFixed(2);
-        porcentajeTarifaP.innerHTML = "% " + porcentajes[7];
-        impuestoMarginalP.innerHTML = "$ " + impuestoMarginal.toFixed(2);
-        cuotaFijaTarifaP.innerHTML = "$ " + cuotasFijas[7].toFixed(2);
-        pagarISRP.innerHTML = "$ " + impuestoISR.toFixed(2);
-
+        menosLimiteInferior.innerHTML = numberFormatter.format(ingresoExcedente);
+        porcentajeTarifaP.innerHTML = porcentajes[7] + "%";
+        impuestoMarginalP.innerHTML = numberFormatter.format(impuestoMarginal);
+        cuotaFijaTarifaP.innerHTML = numberFormatter.format(cuotasFijas[7]);
+        pagarISRP.innerHTML = numberFormatter.format(impuestoISR);
         
     }
 
@@ -154,12 +149,11 @@ function calcularOnClick(){
         
         const impuestoISR = impuestoMarginal + cuotasFijas[8];
 
-        menosLimiteInferior.innerHTML = "$ " + ingresoExcedente.toFixed(2);
-        porcentajeTarifaP.innerHTML = "% " + porcentajes[8];
-        impuestoMarginalP.innerHTML = "$ " + impuestoMarginal.toFixed(2);
-        cuotaFijaTarifaP.innerHTML = "$ " + cuotasFijas[8].toFixed(2);
-        pagarISRP.innerHTML = "$ " + impuestoISR.toFixed(2);
-
+        menosLimiteInferior.innerHTML = numberFormatter.format(ingresoExcedente);
+        porcentajeTarifaP.innerHTML = porcentajes[8] + "%";
+        impuestoMarginalP.innerHTML = numberFormatter.format(impuestoMarginal);
+        cuotaFijaTarifaP.innerHTML = numberFormatter.format(cuotasFijas[8]);
+        pagarISRP.innerHTML = numberFormatter.format(impuestoISR);
         
     }
 
@@ -170,12 +164,11 @@ function calcularOnClick(){
         
         const impuestoISR = impuestoMarginal + cuotasFijas[9];
 
-        menosLimiteInferior.innerHTML = "$ " + ingresoExcedente.toFixed(2);
-        porcentajeTarifaP.innerHTML = "% " + porcentajes[9];
-        impuestoMarginalP.innerHTML = "$ " + impuestoMarginal.toFixed(2);
-        cuotaFijaTarifaP.innerHTML = "$ " + cuotasFijas[9].toFixed(2);
-        pagarISRP.innerHTML = "$ " + impuestoISR.toFixed(2);
-
+        menosLimiteInferior.innerHTML = numberFormatter.format(ingresoExcedente);
+        porcentajeTarifaP.innerHTML = porcentajes[9] + "%";
+        impuestoMarginalP.innerHTML = numberFormatter.format(impuestoMarginal);
+        cuotaFijaTarifaP.innerHTML = numberFormatter.format(cuotasFijas[9]);
+        pagarISRP.innerHTML = numberFormatter.format(impuestoISR);
         
     }
 
@@ -186,35 +179,19 @@ function calcularOnClick(){
         
         const impuestoISR = impuestoMarginal + cuotasFijas[10];
 
-        menosLimiteInferior.innerHTML = "$ " + ingresoExcedente.toFixed(2);
-        porcentajeTarifaP.innerHTML = "% " + porcentajes[10];
-        impuestoMarginalP.innerHTML = "$ " + impuestoMarginal.toFixed(2);
-        cuotaFijaTarifaP.innerHTML = "$ " + cuotasFijas[10].toFixed(2);
-        pagarISRP.innerHTML = "$ " + impuestoISR.toFixed(2);
-
+        menosLimiteInferior.innerHTML = numberFormatter.format(ingresoExcedente);
+        porcentajeTarifaP.innerHTML = porcentajes[10] + "%";
+        impuestoMarginalP.innerHTML = numberFormatter.format(impuestoMarginal);
+        cuotaFijaTarifaP.innerHTML = numberFormatter.format(cuotasFijas[10]);
+        pagarISRP.innerHTML = numberFormatter.format(impuestoISR);
         
     }
 
-    else if(deduccionesDelMes > limitesInferiores[11] && deduccionesDelMes < limitesSuperiores[11]){
-        const limiteInferior = limitesInferiores[11];
-        const ingresoExcedente = deduccionesDelMes - limiteInferior;
-        const impuestoMarginal = ingresoExcedente * (porcentajes[11] / 100);
-        
-        const impuestoISR = impuestoMarginal + cuotasFijas[11];
-
-        menosLimiteInferior.innerHTML = "$ " + ingresoExcedente.toFixed(2);
-        porcentajeTarifaP.innerHTML = "% " + porcentajes[11];
-        impuestoMarginalP.innerHTML = "$ " + impuestoMarginal.toFixed(2);
-        cuotaFijaTarifaP.innerHTML = "$ " + cuotasFijas[11].toFixed(2);
-        pagarISRP.innerHTML = "$ " + impuestoISR.toFixed(2);
-
-        
-    }
-
+   
     
 
 
-    ingreso.innerHTML = "$ " + ingresoGravable.toFixed(2);
-    deduccionMesP.innerHTML = "$ " + deduccionesDelMes.toFixed(2);
+    ingreso.innerHTML = numberFormatter.format(ingresoGravable);
+    deduccionMesP.innerHTML = numberFormatter.format(deduccionesDelMes);
     event.preventDefault(); 
 }

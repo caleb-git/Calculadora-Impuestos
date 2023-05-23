@@ -4,6 +4,7 @@
 const cantidad = document.querySelector('#cantidad');
 const ingreso = document.querySelector('#ingreso');
 const botonCalcular = document.querySelector('#btn-calcular');
+const divCalculando = document.querySelector('#div-calculandoID');////////////////////////
 
 const deduccionMesP = document.querySelector('#deduccionMes');
 const menosLimiteInferior = document.querySelector('#menosLimiteInferior');
@@ -12,7 +13,19 @@ const impuestoMarginalP = document.querySelector('#impuestoMarginal');
 const cuotaFijaTarifaP = document.querySelector('#cuotaFijaTarifa');
 const  pagarISRP= document.querySelector('#pagarISR');
 
+botonCalcular.addEventListener('click', toggleDivCalculando);
 botonCalcular.addEventListener('click', calcularOnClick);
+
+
+//////////////////////////////////
+function toggleDivCalculando(){
+    const estaOcultoDiv = divCalculando.classList.contains('inactive');
+
+    if(estaOcultoDiv){
+        divCalculando.classList.remove('inactive');
+    }
+}
+
 
 function calcularOnClick(){
     const ingresoGravable = (Number(cantidad.value));

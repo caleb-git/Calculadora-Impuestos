@@ -4,7 +4,13 @@
 const cantidad = document.querySelector('#cantidad');
 const ingreso = document.querySelector('#ingreso');
 const botonCalcular = document.querySelector('#btn-calcular');
-const divCalculando = document.querySelector('#div-calculandoID');////////////////////////
+const botonCalcularLocal = document.querySelector('#btn-calcularLocal');
+const divCalculando = document.querySelector('#div-calculandoID');
+
+const menuMobile = document.querySelector('#containerMenuMobile');
+const iconoCerrarMobile = document.querySelector('#iconoCerrarMenuMobile');
+
+const iconoMenuMobileImg = document.querySelector('#menuMobileimg');
 
 const deduccionMesP = document.querySelector('#deduccionMes');
 const menosLimiteInferior = document.querySelector('#menosLimiteInferior');
@@ -12,21 +18,18 @@ const porcentajeTarifaP = document.querySelector('#porcentajeTarifa');
 const impuestoMarginalP = document.querySelector('#impuestoMarginal');
 const cuotaFijaTarifaP = document.querySelector('#cuotaFijaTarifa');
 const  pagarISRP= document.querySelector('#pagarISR');
+const  ivaLocalP= document.querySelector('#pagarIvaLocalP');
+const  impuestosTotalLocalP= document.querySelector('#impuestosTotalLocalP');
 
-botonCalcular.addEventListener('click', toggleDivCalculando);
+//Al hacer clic en Casas y Departamentos//
 botonCalcular.addEventListener('click', calcularOnClick);
+botonCalcular.addEventListener('click', toggleDivCalculando);
+iconoCerrarMobile.addEventListener('click', toggleMenuMobile);
+iconoMenuMobileImg.addEventListener('click', abrirMenuMobile);
 
 
-//////////////////////////////////
-function toggleDivCalculando(){
-    const estaOcultoDiv = divCalculando.classList.contains('inactive');
 
-    if(estaOcultoDiv){
-        divCalculando.classList.remove('inactive');
-    }
-}
-
-
+//Calcular Arrendamiento Casas y Departamentos//
 function calcularOnClick(){
     const ingresoGravable = (Number(cantidad.value));
     const deduccionCiega = (Number(cantidad.value)) * 0.35;
@@ -208,3 +211,40 @@ function calcularOnClick(){
     deduccionMesP.innerHTML = numberFormatter.format(deduccionesDelMes);
     event.preventDefault(); 
 }
+
+
+function toggleDivCalculando(){
+    const estaOcultoDiv = divCalculando.classList.contains('inactive');
+
+    if(estaOcultoDiv){
+        divCalculando.classList.remove('inactive');
+    }
+}
+
+function toggleMenuMobile(){
+    const isMobileMenuClosed = menuMobile.classList.contains('inactive');
+
+    if(!isMobileMenuClosed){
+        menuMobile.classList.add('inactive');
+    }
+    console.log('Click');
+   
+
+   
+}
+
+function abrirMenuMobile(){
+    const isMobileMenuOpen = menuMobile.classList.contains('inactive');
+
+    if(isMobileMenuOpen){
+        menuMobile.classList.remove('inactive');
+    }
+    console.log('Click');
+   
+
+   
+}
+
+
+
+
